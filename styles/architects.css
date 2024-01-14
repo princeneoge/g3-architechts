@@ -13,6 +13,10 @@ header {
     padding: 50px 240px;
 }
 
+.text-light-gray {
+    color: #727272;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -56,12 +60,6 @@ nav li a {
     color: #131313;
 }
 
-.banner-description {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #727272;
-}
-
 .btn-primary {
     border-radius: 8px;
     color: #FFF;
@@ -79,33 +77,9 @@ nav li a {
     width: 100%;
 }
 
-
-/* responsive styles */
-/* mobile devices */
-@media screen and (max-width: 576px) {
-    header {
-        padding: 20px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-}
-
-/* tablet styles */
-@media screen and (min-width: 576px; ) and (max-width: 980px) {
-    header {
-        padding: 50px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-}
-
 main {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 
 /* teams style */
@@ -119,27 +93,56 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
-.teams-content{
+
+.teams-content {
     padding-right: 70px;
     padding-left: 70px;
 }
-.teams-title{
+
+.teams-title {
+    font-size: 3rem;
+}
+
+.teams-title .quick-list {
     font-size: 3rem;
     font-weight: 500;
 }
-.quick-list{
-    font-size: 3rem;
-    font-weight: 500;
-    color: #727272;
-}
-.of-our{
-    color: #131313;
-    font-size: 3rem;
-    font-weight: 700;
-}
-.features{
+
+.teams-title .text-features {
     color: #FF900E;
-    font-size: 3rem;
     font-weight: 700;
-    font-family: 'Work Sans', sans-serif;
 }
+
+.of-our {
+    color: #131313;
+    font-weight: 700;
+}
+
+/* responsive styles */
+/* mobile devices */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+
+    nav, .teams-container {
+        flex-direction: column;
+    }
+
+    .teams-img-container{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* tablet styles */
+@media screen and (min-width: 576px; ) and (max-width: 980px) {
+    header {
+        padding: 50px;
+    }
+
+    nav, .teams-container {
+        flex-direction: column;
+    }
+}
+
